@@ -1,0 +1,2 @@
+is_on=True
+alert_if_target_below_value=503.0
