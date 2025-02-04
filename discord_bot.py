@@ -32,7 +32,7 @@ async def send_currency_rate():
         date_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         rate = get_currency_rate(CURRENCY_NAME, CURRENCY_URL)
         if type(rate) == str:
-            await channel.send(rate)
+            await channel.send(f"{owner.mention}: {rate}")
             await asyncio.sleep(60)
             await send_currency_rate()
             return
