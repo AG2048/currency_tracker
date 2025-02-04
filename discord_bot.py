@@ -39,9 +39,9 @@ async def send_currency_rate():
         owner = await bot.fetch_user(int(OWNER_USER_ID))
         if rate < alert_if_target_below_value:
             # Send with mention
-            await channel.send(f"{date_time_str}: Current {CURRENCY_B_SYMBOL} to {CURRENCY_A_SYMBOL} rate is {rate:.2f}, threshold is <= {alert_if_target_below_value:.2f}. {owner.mention}")
+            await channel.send(f"`{date_time_str}`: Current {CURRENCY_B_SYMBOL} to {CURRENCY_A_SYMBOL} rate is **{rate:.2f}**, threshold is <= {alert_if_target_below_value:.2f}. {owner.mention}")
         else:
-            await channel.send(f"{date_time_str}: Current {CURRENCY_B_SYMBOL} to {CURRENCY_A_SYMBOL} rate is {rate:.2f}, threshold is <= {alert_if_target_below_value:.2f}.")
+            await channel.send(f"`{date_time_str}`: Current {CURRENCY_B_SYMBOL} to {CURRENCY_A_SYMBOL} rate is **{rate:.2f}**, threshold is <= {alert_if_target_below_value:.2f}.")
         await asyncio.sleep(60)
         await send_currency_rate()
         return
