@@ -1,2 +1,4 @@
 is_on=True
-alert_if_target_below_value=503.0
+alert_if_target_below_value=505.0
+previous_currency_rate=508.27
+only_display_change=False
